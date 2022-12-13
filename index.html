@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+<style>
+    h1{
+        color: red;
+    }
+    pre{
+        color: blue;
+    }
+    
+</style>
+<body>
+    <h1>Javascript fourth handson
+    </h1>
+
+    <h3>Find the Product.</h3>
+    <pre>
+        const Find_Prod = (array, N) => 
+    {
+ 
+   let prod=1;
+    for(let i=0;i<=array.length;i++){
+     prod=prod*array[i];
+    }
+    return prod;  
+
+    };
+ 
+    </pre>
+    <hr>
+
+    <h3>Find the Sum.</h3>
+    <pre>
+        const Find_Sum = (array, N) => 
+{
+  let sum=0;
+  let i=0;
+  while(i<=array.length){
+    sum=sum+array[i];
+    i++;
+  }
+ 
+return sum;
+
+};
+ 
+    </pre>
+    <hr>
+
+    <h3>Count Occurrences</h3>
+    <pre>
+        const findCount = (N, K, Arr) => 
+{
+  var count=0;
+  for(let i=0;i<=N;i++){
+    
+    if(Arr[i]===K)
+    count++;
+  }
+    return count;
+
+};
+    </pre>
+    <hr>
+
+    <h3>Even Odd</h3>
+    <pre>
+        const findEvenOdd = (N, Arr) => 
+{
+   let evencount=0,oddcount=0;
+  let arr2=[];
+  for(let i=0;i<=N;i++){
+    
+    if(Arr[i]%2 === 0){
+      evencount=evencount+Arr[i];
+    }
+    else{
+      oddcount=oddcount+Arr[i];
+    }
+  }
+  arr2[0]=evencount;
+  arr2[1]=oddcount;
+  return(arr2);
+     
+};
+    </pre>
+    <hr>
+
+    <h3>Find whether the number is present or not</h3>
+    <pre>
+        const Find_Num = (array,N,M) => 
+{
+  let isPresent=false;
+  for(let i=0;i<=N;i++){
+    if(array[i]===M){
+    isPresent=true;
+    break;
+    }
+    
+  }
+  if(isPresent) return "YES" ;
+  else return "NO";
+  
+
+};
+    </pre>
+    <hr>
+
+    <h3>Higher Age</h3>
+    <pre>const highAge = (N, Arr) => 
+        {
+           let array2=[];
+            let j=0;
+            for(let i=0;i<N;i++){
+              if(Arr[i]>=18){
+              array2[j]=Arr[i];
+              j++;
+              }
+            }
+            return array2 ;
+         
+        };
+         </pre>
+         <hr>
+
+    <h3>Increment the Array Elements</h3>
+    <pre>
+        const Inc_Arr = (array,N) => 
+{
+  let array2=[];
+  for(let i=0;i<=N;i++){
+    array2=array[i]+1;
+    console.log(array2);
+  }
+
+};
+ 
+    </pre>
+    <hr>
+
+    <h3>Pass or Fail</h3>
+    <pre>
+        const isAllPass = (N, Arr) => 
+{
+    let pass=true;
+    for(let i=0;i<=N;i++){
+      if(Arr[i]<=32){
+        pass=false;
+        break;
+      }
+    }
+    if(pass) return "YES";
+    else return "NO";
+
+};
+    </pre>
+    <hr>
+
+    <h3>Min and Max</h3>
+    <pre>function arrayMin(arr) {
+  
+        return arr.reduce(function(p,v){
+        return (p < v ? p : v);
+          
+        });
+        }
+        
+        
+        function arrayMax(arr) {
+          
+        return arr.reduce(function (p, v) {
+          
+            return ( p > v ? p : v );
+          });
+        
+        }</pre>
+</body>
+</html>
